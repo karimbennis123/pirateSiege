@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=RecruitSkellyButton
+comment0.text=\n\ \n
+comment1.params=
+comment1.target=RecruitSkellyButton()
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\n\ Act\ -\ do\ whatever\ the\ Option1_Button\ wants\ to\ do.\ This\ method\ is\ called\ whenever\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\ PLACEHOLDER\ FOR\ RECRUIT\ SKELLY\ BUTTON\n
+numComments=3
