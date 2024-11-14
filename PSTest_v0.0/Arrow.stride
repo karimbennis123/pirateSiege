@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="Arrow" extends="RecruitSkellyButton" extends-java="RecruitSkellyButton" enable="true" strideversion="1">
+    <javadoc xml:space="preserve"/>
+    <imports>
+        <import target="java.util.*" enable="true"/>
+        <import target="greenfoot.*" enable="true"/>
+    </imports>
+    <implements/>
+    <fields/>
+    <constructors>
+        <constructor access="public" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params/>
+            <throws/>
+            <body>
+                <variable type="GreenfootImage" type-java="GreenfootImage" name="img" value="getImage()" value-java="getImage()" enable="true"/>
+                <call expression="img.scale(50,50)" expression-java="img.scale(50, 50)" enable="true"/>
+            </body>
+        </constructor>
+    </constructors>
+    <methods>
+        <method access="public" type="void" type-java="void" name="act" enable="true">
+            <javadoc xml:space="preserve">Act - do whatever the ArrowTest wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <if condition="getOneIntersectingObject(Crewmen.class)!=null" condition-java="getOneIntersectingObject(Crewmen.class) != null" enable="true">
+                    <ifStatements>
+                        <call expression="getWorld().removeObject(this)" expression-java="getWorld().removeObject(this)" enable="true"/>
+                    </ifStatements>
+                </if>
+                <if condition="Greenfoot.mouseClicked(this)" condition-java="Greenfoot.mouseClicked(this)" enable="true">
+                    <ifStatements>
+                        <call expression="skeletonSound.play()" expression-java="skeletonSound.play()" enable="true"/>
+                        <variable type="List&lt;Arrow&gt;" type-java="List&lt;Arrow&gt;" name="arrows" value="getWorld().getObjects(Arrow.class)" value-java="getWorld().getObjects(Arrow.class)" enable="true"/>
+                        <variable type="RecruitSkelly" type-java="RecruitSkelly" name="skelly1" value="new RecruitSkelly()" value-java=" new RecruitSkelly()" enable="true"/>
+                        <call expression="getWorld().addObject(skelly1,getX(),(getY()+60))" expression-java="getWorld().addObject(skelly1, getX(), (getY() + 60))" enable="true"/>
+                        <call expression="getWorld().removeObjects(arrows)" expression-java="getWorld().removeObjects(arrows)" enable="true"/>
+                    </ifStatements>
+                </if>
+            </body>
+        </method>
+    </methods>
+</class>

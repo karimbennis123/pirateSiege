@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="Bullets" extends="Actor" extends-java="Actor" enable="true" strideversion="1">
+    <javadoc xml:space="preserve"/>
+    <imports>
+        <import target="java.util.*" enable="true"/>
+        <import target="greenfoot.*" enable="true"/>
+    </imports>
+    <implements/>
+    <fields>
+        <variable access="protected" type="int" type-java="int" name="speed" enable="true"/>
+    </fields>
+    <constructors/>
+    <methods>
+        <method access="public" type="void" type-java="void" name="act" enable="true">
+            <javadoc xml:space="preserve">Act - do whatever the Bullets wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.</javadoc>
+            <params/>
+            <throws/>
+            <body/>
+        </method>
+        <method access="public" type="void" type-java="void" name="borderCollision" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params>
+                <params type="Bullets" type-java="Bullets" name="bullet"/>
+            </params>
+            <throws/>
+            <body>
+                <if condition="bullet.isAtEdge()" condition-java="bullet.isAtEdge()" enable="true">
+                    <ifStatements>
+                        <call expression="getWorld().removeObject(this)" expression-java="getWorld().removeObject(this)" enable="true"/>
+                    </ifStatements>
+                </if>
+            </body>
+        </method>
+        <method access="public" type="void" type-java="void" name="setSpeed" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params>
+                <params type="int" type-java="int" name="tempSpeed"/>
+            </params>
+            <throws/>
+            <body>
+                <assign dest="speed" dest-java="speed" src="tempSpeed" src-java="tempSpeed" enable="true"/>
+                <call expression="move(speed)" expression-java="move(speed)" enable="true"/>
+            </body>
+        </method>
+    </methods>
+</class>

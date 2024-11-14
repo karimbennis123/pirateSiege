@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="Buttons" extends="Actor" extends-java="Actor" enable="true" strideversion="1">
+    <javadoc xml:space="preserve"/>
+    <imports>
+        <import target="java.util.*" enable="true"/>
+        <import target="greenfoot.*" enable="true"/>
+    </imports>
+    <implements/>
+    <fields>
+        <variable access="protected" type="GreenfootSound" type-java="GreenfootSound" name="skeletonSound" value="new GreenfootSound(&quot;SkeletonSound.wav&quot;)" value-java=" new GreenfootSound(&quot;SkeletonSound.wav&quot;)" enable="true"/>
+    </fields>
+    <constructors/>
+    <methods>
+        <method access="public" type="void" type-java="void" name="act" enable="true">
+            <javadoc xml:space="preserve">Act - do whatever the Buttons wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.</javadoc>
+            <params/>
+            <throws/>
+            <body/>
+        </method>
+    </methods>
+</class>
