@@ -13,12 +13,12 @@ public class ArmouredUpgrade extends Upgrades
      */
     public void act()
     {
-        setImage("UpgradeArmouredButton.png");
+        setImage("ShieldArmourScaled.png");
         if (Greenfoot.mouseMoved(getWorld())) {
-            setImage("UpgradeArmouredButton.png");
+            setImage("ShieldArmourHighlightedScaled.png");
         }
         if (Greenfoot.mouseMoved(this)) {
-            setImage("UpgradeArmouredButtonHighlighted.png");
+            setImage("ShieldArmourHighlightedScaled.png");
         }
         if (Greenfoot.mouseClicked(this)) {
             Actor intersecting = getOneIntersectingObject(RecruitSkelly.class);
