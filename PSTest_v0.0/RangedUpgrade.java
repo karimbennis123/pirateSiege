@@ -13,12 +13,12 @@ public class RangedUpgrade extends Upgrades
      */
     public void act()
     {
-        setImage("UpgradeRangedButton.png");
+        setImage("FlintGunScaled_Cropped.png");
         if (Greenfoot.mouseMoved(getWorld())) {
-            setImage("UpgradeRangedButton.png");
+            setImage("FlintGunScaled_Cropped.png");
         }
         if (Greenfoot.mouseMoved(this)) {
-            setImage("UpgradeRangedButtonHighlighted.png");
+            setImage("FlintGunHighlightedCropped.png");
         }
         if (Greenfoot.mouseClicked(this)) {
             Actor intersecting = getOneIntersectingObject(RecruitSkelly.class);

@@ -20,22 +20,34 @@ public class RecruitSkelly extends Crewmen
         img2.scale(125,125);
         
     }
-
+    
+    
+    
     /**
      * Act - do whatever the RecruitSkelly wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
         setImage(img);
+        Background world = (Background) getWorld();
+        Counter counter = world.getCounter();
         if (Greenfoot.mouseMoved(getWorld())) {
             setImage(img);
         }
         if (Greenfoot.mouseMoved(this)) {
             setImage(img2);
         }
-        if (Greenfoot.mouseClicked(this)) {
+        if (counter.getValue() > 5) {
+           if (Greenfoot.mouseClicked(this)) {
             getWorld().addObject(rangeUpgrade, getX(), getY() + 25);
             getWorld().addObject(armorUpgrade, getX(), getY() -25);
+            } 
+        } else if (counter.getValue() < 5) {
+            if (Greenfoot.mouseClicked(this)) {
+                NotEnoughGold text = new NotEnoughGold("Not enough gold!", 60);
+                getWorld().addObject(text, getX(), getY() - 50);
+            }
         }
+        
     }
 }

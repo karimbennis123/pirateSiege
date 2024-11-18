@@ -24,8 +24,8 @@ public class SplashScreen extends World
         if(actCounter == 50*3){
             MenuScreen menuScreen = new MenuScreen();
             Greenfoot.setWorld(menuScreen);
-            RecruitSkellyButton button1 =  new  RecruitSkellyButton();
-            addObject(button1, 414, 538);
+            //RecruitSkellyButton button1 =  new  RecruitSkellyButton();
+            //addObject(button1, 414, 538);
         }//If 50 act = 1 sec, then stay for 3 seconds then switch to menu.
         
     }

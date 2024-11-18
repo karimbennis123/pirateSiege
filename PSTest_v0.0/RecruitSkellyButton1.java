@@ -5,17 +5,17 @@ import greenfoot.*;
 /**
  * 
  */
-public class RecruitSkellyButton extends Buttons
+public class RecruitSkellyButton1 extends Buttons
 {
     GreenfootImage button = new GreenfootImage("RecruitSkellyButton1.png");
     GreenfootImage buttonHighlighted = new GreenfootImage("RecruitSkellyButton1Highlighted.png");
     GreenfootImage buttonGrayed = new GreenfootImage("RecruitSkellyButton1BlackandWhite.png");
     private Counter counter;
-    public RecruitSkellyButton(Counter counter){
+    public RecruitSkellyButton1(Counter counter){
         this.counter = counter;
-        button.scale(150,100);
-        buttonHighlighted.scale(150,100);
-        buttonGrayed.scale(150,100);
+        button.scale(300,300);
+        buttonHighlighted.scale(300,300);
+        buttonGrayed.scale(300,300);
         setImage(button);
     }
     /**
@@ -43,8 +43,11 @@ public class RecruitSkellyButton extends Buttons
                 
                 counter.add(-5);
                 
-            }
             
+                getWorld().removeObject(arrow1);
+                getWorld().removeObject(arrow2);
+                
+            }
         }
         
     }
