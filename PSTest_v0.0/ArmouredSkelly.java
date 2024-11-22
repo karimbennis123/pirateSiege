@@ -1,4 +1,3 @@
-// WARNING: This file is auto-generated and any changes to it will be overwritten
 import lang.stride.*;
 import java.util.*;
 import greenfoot.*;
@@ -8,7 +7,8 @@ import greenfoot.*;
  */
 public class ArmouredSkelly extends Crewmen
 {
-
+    private int healthPoints = 125;
+    private long lastActionTime = 0; 
     /**
      * 
      */
@@ -23,5 +23,21 @@ public class ArmouredSkelly extends Crewmen
      */
     public void act()
     {
+        isFighting();
+        isDead();
+    }
+    protected void isFighting(){
+        if(isTouching(Enemies.class)){
+            long currentTime = System.currentTimeMillis();
+            if(currentTime - lastActionTime >= 1200){
+                healthPoints -= enemyDamage;
+                lastActionTime = currentTime;
+            }
+        }
+    }
+    protected void isDead(){
+        if(healthPoints <= 0){
+         getWorld().removeObject(this);
+        }
     }
 }

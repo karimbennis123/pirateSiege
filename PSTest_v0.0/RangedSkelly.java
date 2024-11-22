@@ -12,6 +12,8 @@ public class RangedSkelly extends Crewmen
     private int soundCount = 0;
     private GreenfootSound fire1 = new GreenfootSound("Fire01.wav");
     private GreenfootSound fire2 = new GreenfootSound("Fire02.wav");
+    private int healthPoints = 75;
+    private long lastActionTime = 0; 
 
     /**
      * 
@@ -52,6 +54,21 @@ public class RangedSkelly extends Crewmen
             setImage("RangedSkellyGif1.png");
             timer = 0;
         }
-
+        isFighting();
+        isDead();
+    }
+    protected void isFighting(){
+        if(isTouching(Enemies.class)){
+            long currentTime = System.currentTimeMillis();
+            if(currentTime - lastActionTime >= 1200){
+                healthPoints -= enemyDamage;
+                lastActionTime = currentTime;
+            }
+        }
+    }
+    protected void isDead(){
+        if(healthPoints <= 0){
+         getWorld().removeObject(this);
+        }
     }
 }

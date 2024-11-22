@@ -7,7 +7,7 @@ import greenfoot.*;
  */
 public class ArmouredUpgrade extends Upgrades
 {
-    GreenfootSound armourSound = new GreenfootSound("ArmouredSound.wav");
+    GreenfootSound armourSound = new GreenfootSound("ArmouredSound.wav"); 
     /**
      * Act - do whatever the Option3_button wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.
      */
@@ -23,6 +23,9 @@ public class ArmouredUpgrade extends Upgrades
         if (Greenfoot.mouseClicked(this)) {
             Actor intersecting = getOneIntersectingObject(RecruitSkelly.class);
             if (intersecting != null) {
+                Background world = (Background) getWorld();
+                Counter counter = world.getCounter();
+                counter.add(-upgradeValue);
                 skeletonSound.play();
                 armourSound.play();
                 List<Upgrades> upgrades = getWorld().getObjects(Upgrades.class);

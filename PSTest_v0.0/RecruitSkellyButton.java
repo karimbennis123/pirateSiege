@@ -25,9 +25,10 @@ public class RecruitSkellyButton extends Buttons
     {
         Background world = (Background) getWorld();
         Counter counter = world.getCounter();
-        if (counter.getValue() <  5) { //check if the counter has enough gold
+        int recruitValue = 10;
+        if (counter.getValue() <  recruitValue) { //check if the counter has enough gold
             setImage(buttonGrayed);
-        } else if (counter.getValue() >= 5) {
+        } else if (counter.getValue() >= recruitValue) {
             RecruitSkelly skelly1 =  new  RecruitSkelly();
             if (Greenfoot.mouseMoved(getWorld())) {
                 setImage(button);
@@ -40,8 +41,17 @@ public class RecruitSkellyButton extends Buttons
                 getWorld().addObject(arrow1, 163, 277);
                 Arrow arrow2 =  new  Arrow();
                 getWorld().addObject(arrow2, 163, 125);
+                Arrow arrow3 =  new  Arrow();
+                getWorld().addObject(arrow3, 388, 277);
+                Arrow arrow4 =  new  Arrow();
+                getWorld().addObject(arrow4, 388, 125);
+                Arrow arrow5 =  new  Arrow();
+                getWorld().addObject(arrow5, 613, 277);
+                Arrow arrow6 =  new  Arrow();
+                getWorld().addObject(arrow6, 613, 125);
                 
-                counter.add(-5);
+                
+                counter.add(-recruitValue);
                 
             }
             
