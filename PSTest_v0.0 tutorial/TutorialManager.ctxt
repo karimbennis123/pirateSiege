@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=TutorialManager
+comment0.text=\n\ Write\ a\ description\ of\ class\ TutorialManager\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=TutorialManager()
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\n\ Act\ -\ do\ whatever\ the\ TutorialManager\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+comment3.params=message
+comment3.target=void\ displayMessage(java.lang.String)
+comment4.params=
+comment4.target=Enemies\ getEnemies()
+comment5.params=
+comment5.target=int\ getRandomY()
+comment6.params=
+comment6.target=void\ spawnEnemies()
+numComments=7
